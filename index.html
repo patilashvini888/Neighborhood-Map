@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>San Jose Eateries</title>
+        <meta name="description" content="Neighborhood Map">
+        <link rel="stylesheet" href="css/styles.css">     
+        <script src = "js/offline-0.7.11.js"></script>
+        <script src="js/knockout-3.3.0.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script  src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places&key=AIzaSyCDVKW79hDTJsCcf_5_KfBF1kkRo71czK8"></script>
+    </head>
+    <body>
+        <div id="map-canvas"></div>
+        <div class="row">
+            <div class="col-md-2 search-form">
+            <input class="search search-form" type="text" placeholder="Search Location" data-bind="textInput: filter"/>
+            <ul data-bind="foreach: filteredArray" class="list-view">
+                <li data-bind="text: name, click: $root.clickHandler"></li>
+            </ul>                    
+            </div>
+        </div>          
+        <script src="js/script.js"></script>
+    </body>
+</html>
